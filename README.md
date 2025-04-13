@@ -3,4 +3,4 @@
 ### Members
 
 - Nathan Cortez
- Jim Klick
+- Jim Klick
