@@ -32,7 +32,7 @@ const courseSchema = new Schema({
 
 const Course = model('Course', courseSchema);
 
-
+//create new course
 const newCourse = new Course({
     courseName: "English 101",
     description: "Introduction to College-level writing.",
