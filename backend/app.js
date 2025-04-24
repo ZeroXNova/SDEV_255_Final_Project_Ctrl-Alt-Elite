@@ -1,6 +1,7 @@
 //required imports
 const express = require("express");
 const mongoose = require("mongoose");
+const { Schema, model } = require("mongoose");
 var cors = require("cors");
 
 //activate server
@@ -22,12 +23,11 @@ mongoose.connect("mongodb+srv://FPAdmin:Y8imOPz5a0wHIwBQ@fpcluster1.5h639vi.mong
 
 
 //define Mongoose Schema
-const { Schema, model } = require("mongoose");
 const courseSchema = new Schema({
-    courseName: String,
-    description: String,
-    subjectArea: String,
-    credits: Number
+    courseName: {type: String, required: true},
+    description: {type: String, required: true},
+    subjectArea: {type: String, required: true},
+    credits: {type: Number, required: true, min: 1, max: 3},
 });
 
 const Course = model('Course', courseSchema);
